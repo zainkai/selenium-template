@@ -1,0 +1,4 @@
+[default]
+chrome_path=vendor/chromedriver
+
+[local]
