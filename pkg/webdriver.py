@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 
 from config.configuration import Config
+from config import constant
 from time import sleep
 
 class WebDriver:
@@ -11,7 +12,7 @@ class WebDriver:
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-notifications")
 
-    self.Driver = webdriver.Chrome(chrome_options=options, executable_path=Config.get("chrome_path"))
+    self.Driver = webdriver.Chrome(chrome_options=options, executable_path=Config.get(constant.chrome_path))
     self.Driver.get(url)
 
   def Done(self):
